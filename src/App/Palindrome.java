@@ -2,7 +2,6 @@ package App;
 
 public class Palindrome {
     public Palindrome() {
-
     }
 
     public static boolean isPalindrome(String currentString) {
