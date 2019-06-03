@@ -10,12 +10,7 @@ public class NegativeTextAnalyzer extends KeywordAnalyzer {
     }
 
     @Override
-    protected String getKeywords() {
-        StringBuilder bufferKeywords = new StringBuilder();
-        for (String i : keywords) {
-            bufferKeywords.append(i)
-                    .append(" ");
-        }
-        return bufferKeywords.toString();
+    protected String [] getKeywords() {
+        return keywords;
     }
 }

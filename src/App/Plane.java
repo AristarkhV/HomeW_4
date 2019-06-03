@@ -1,10 +1,10 @@
 package App;
 
 public class Plane {
-    private String type = null;
-    private int engineNumber = 0;
-    private String fuselage = null;
-    private String wing = null;
+    private String type;
+    private int engineNumber;
+    private String fuselage;
+    private String wing;
 
     public void setType(String type) {
         this.type = type;

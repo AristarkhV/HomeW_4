@@ -18,10 +18,14 @@ public class AsciiCharSequence implements CharSequence {
     @Override
     public CharSequence subSequence(int startIndex, int endIndex) {
         byte[] subSequence = new byte[endIndex - startIndex];
-        for (int i = startIndex; i < endIndex; i++) {
-            subSequence[i - startIndex] = inputArray[i];
+        if (startIndex < endIndex) {
+            for (int i = startIndex; i < endIndex; i++) {
+                subSequence[i - startIndex] = inputArray[i];
+            }
+            return new AsciiCharSequence(subSequence);
+        } else {
+            return new AsciiCharSequence(null);
         }
-        return new AsciiCharSequence(subSequence);
     }
 
     @Override
